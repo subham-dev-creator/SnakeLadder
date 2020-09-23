@@ -8,6 +8,7 @@ public class SnakeLadder {
 	static final int MaxPos=100;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		int DiceRoll=0;
 		int currentPos=startPos;
 		while(currentPos<MaxPos) {
 			if(currentPos<0)
@@ -15,6 +16,7 @@ public class SnakeLadder {
 			
 			int Option=(int)(Math.random()*20 %3);
 			int CurrentDiceNumber = (int) (Math.random()*20%6);
+			DiceRoll++;
 			//as mod with 6 can generate 0 so to over come it we increament it
 			CurrentDiceNumber++;
 			
@@ -36,7 +38,8 @@ public class SnakeLadder {
 			}
 			System.out.println("Current Pos : "+currentPos);
 		}
-		System.out.println("Win");
+		System.out.println("Win ");
+		System.out.println("Total Dice Roll : "+DiceRoll);
 	}
 
 }
