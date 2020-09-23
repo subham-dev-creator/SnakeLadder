@@ -9,7 +9,7 @@ public class SnakeLadder {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int currentPos=startPos;
-		while(currentPos<=MaxPos) {
+		while(currentPos<MaxPos) {
 			if(currentPos<0)
 				currentPos=startPos;
 			
@@ -26,6 +26,8 @@ public class SnakeLadder {
 			else if(Option==1) {
 				//Moves Ahead
 				currentPos+=CurrentDiceNumber;
+				if(currentPos>100)
+					currentPos-=CurrentDiceNumber;
 				
 			}
 			else {
@@ -34,6 +36,7 @@ public class SnakeLadder {
 			}
 			System.out.println("Current Pos : "+currentPos);
 		}
+		System.out.println("Win");
 	}
 
 }
